@@ -152,9 +152,9 @@ def main():
     # Moment
     ax2.plot(x_vals, M_vals, 'tab:orange', lw=2)
     ax2.fill_between(x_vals, M_vals, color='tab:orange', alpha=0.3)
-    ax2.set_ylabel('Moment Fléchissant M (kNm)')
+    ax2.set_ylabel('Mouvment Fléchissant M (kNm)')
     ax2.set_xlabel('Position x (m)')
-    ax2.set_title('Moment Fléchissant')
+    ax2.set_title('Mouvment Fléchissant')
     ax2.grid(True, alpha=0.3)
     ax2.axhline(0, color='black', lw=1)
     ax2.invert_yaxis()
