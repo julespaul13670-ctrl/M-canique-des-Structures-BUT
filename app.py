@@ -91,7 +91,7 @@ class PoutreCalculator:
     def effort_tranchant(self, x):
         V = 0
         
-        # Réactions d'appuis (forces vers le haut donc négatives dans V si on regarde à gauche convention RDM classique V + dM/dx ...)
+        # Réactions d'appuis (forces vers le haut donc négatives dans V si on regarde à gauche convention RDM classique V + dM/dx ..)
         # Simplification : On fait Somme des forces à gauche de la coupure.
         # Force vers le haut (+), Force vers le bas (-).
         # V(x) = Somme F_verticales_gauche
