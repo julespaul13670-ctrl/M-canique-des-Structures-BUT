@@ -105,9 +105,9 @@ class PoutreCalculator:
 
 # --- 2. INTERFACE WEB ---
 def main():
-    st.set_page_config(page_title="RDM Calculator", page_icon="🏗️", layout="wide")
+    st.set_page_config(page_title="Poutre Effort Calculateur", page_icon="🏗️", layout="wide")
     
-    st.title("🏗️ Calculateur RDM - Poutres")
+    st.title("🏗️ Calculateur - Poutres")
     st.markdown("---")
 
     col_conf, col_graph = st.columns([1, 2])
@@ -122,7 +122,7 @@ def main():
         u_rep = "kN/m" if u_f == "kN" else "N/m"
 
         # --- GÉOMÉTRIE (Valeurs vides par défaut) ---
-        L = st.number_input("Longueur Totale de la poutre (m)", value=0.0, step=0.5, min_value=0.0)
+        L = st.number_input("Longueur Totale de la poutre (m)", value=0.0, step=1, min_value=0.0)
         
         if L > 0:
             poutre = PoutreCalculator(L)
@@ -132,8 +132,8 @@ def main():
             pos_a, pos_b = 0.0, L
             if type_struc == "Sur 2 Appuis (Standard/Porte-à-faux)":
                 c1, c2 = st.columns(2)
-                pos_a = c1.number_input("Position Appui A (m)", 0.0, L, 0.0, step=0.1)
-                pos_b = c2.number_input("Position Appui B (m)", 0.0, L, 0.0, step=0.1)
+                pos_a = c1.number_input("Position Appui A (m)", 0.0, L, 0.0, step=1)
+                pos_b = c2.number_input("Position Appui B (m)", 0.0, L, 0.0, step=1)
                 
                 if pos_b == 0:
                     st.warning("⚠️ Attention: Position Appui B est à 0. Veuillez le placer.")
@@ -182,7 +182,7 @@ def main():
                 st.info("Aucune charge ajoutée.")
 
         else:
-            st.info("👈 Veuillez commencer par entrer la longueur de la poutre.")
+            st.info("Veuillez commencer par entrer la longueur de la poutre.")
 
     # --- CALCULS ---
     with col_graph:
