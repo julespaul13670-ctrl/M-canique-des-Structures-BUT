@@ -122,7 +122,7 @@ def main():
         u_rep = "kN/m" if u_f == "kN" else "N/m"
 
         # --- GÉOMÉTRIE (Valeurs vides par défaut) ---
-        L = st.number_input("Longueur Totale de la poutre (m)", value=0.0, step=1, min_value=0.0)
+        L = st.number_input("Longueur Totale de la poutre (m)", value=0.0, step=1.0, min_value=0.0)
         
         if L > 0:
             poutre = PoutreCalculator(L)
