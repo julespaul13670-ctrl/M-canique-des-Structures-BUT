@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # ==============================================================================
-#  CLASSE MOTEUR (C'est exactement la même que ton code précédent)
+#  CLASSE MOTEUR
 # ==============================================================================
 class PoutreCalculator:
     def __init__(self, longueur):
