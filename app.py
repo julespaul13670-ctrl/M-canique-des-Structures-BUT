@@ -132,8 +132,8 @@ def main():
             pos_a, pos_b = 0.0, L
             if type_struc == "Sur 2 Appuis (Standard/Porte-à-faux)":
                 c1, c2 = st.columns(2)
-                pos_a = c1.number_input("Position Appui A (m)", 0.0, L, 0.0, step=1)
-                pos_b = c2.number_input("Position Appui B (m)", 0.0, L, 0.0, step=1)
+                pos_a = c1.number_input("Position Appui A (m)", 0.0, L, 0.0, step=1.0)
+                pos_b = c2.number_input("Position Appui B (m)", 0.0, L, 0.0, step=1.0)
                 
                 if pos_b == 0:
                     st.warning("⚠️ Attention: Position Appui B est à 0. Veuillez le placer.")
